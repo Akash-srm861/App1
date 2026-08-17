@@ -1,4 +1,4 @@
-FROM node:20-alpine
+FROM node:20-slim
 
 # Set working directory
 WORKDIR /app
@@ -9,7 +9,6 @@ COPY client/package*.json ./client/
 COPY server/package*.json ./server/
 
 # Install dependencies
-RUN apk add --no-cache python3 make g++
 RUN npm run install:all
 
 # Copy everything else
