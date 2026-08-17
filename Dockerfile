@@ -9,6 +9,7 @@ COPY client/package*.json ./client/
 COPY server/package*.json ./server/
 
 # Install dependencies
+RUN apk add --no-cache python3 make g++
 RUN npm run install:all
 
 # Copy everything else
