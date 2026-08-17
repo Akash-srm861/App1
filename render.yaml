@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: code-the-output
+    env: node
+    buildCommand: npm run install:all && npm run build
+    startCommand: npm run start
